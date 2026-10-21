@@ -6,17 +6,16 @@ This public repository is the release channel for the Perkins desktop applicatio
 
 Perkins checks the latest published release here when it starts and every six hours while open. If a newer update is available for your operating system, choose **Update now** or **Later**. Update now downloads the package and verifies its SHA-256 digest. On Linux, Perkins also checks the ZIP manifest and file hashes, backs up the current application files, and installs the update. Restart Perkins afterward.
 
-On Windows, Update now opens the verified setup EXE. On Apple silicon Macs, Update now opens the verified DMG; drag Perkins into Applications. The matching `.exe` and `.dmg`, along with the Linux `.run` installer, are also archived in the private Perkins repository for initial and manual installs. Google Drive is used for the shared technical library; it is not an application update source.
+The current public release offers a Linux update ZIP. Windows and Mac update-only packages are being prepared. Until those are available, existing Windows and Mac copies need a one-time manual install from the private Perkins release. The `.exe`, `.dmg`, and Linux `.run` installers are kept in that private repository. Google Drive is used for the shared technical library; it is not an application update source.
 
 ## Release files
 
 - `Perkins-X.Y.Z-linux-update.zip`: Linux update package for an existing Perkins installation.
-- `Perkins-X.Y.Z-windows-x64-setup.exe`: Windows update, opened by Perkins.
-- `Perkins-X.Y.Z-macos-arm64.dmg`: Apple silicon Mac update, opened by Perkins.
-- `Perkins-X.Y.Z-windows-update.zip`: Optional Windows update ZIP.
+- `Perkins-X.Y.Z-windows-update.zip`: Windows update package when available.
+- `Perkins-X.Y.Z-macos-arm64-update.zip`: Apple silicon Mac update package when available.
 - Matching `.sha256` files: checksums for independent verification.
 
 The release tag must be `vX.Y.Z` or `X.Y.Z`. Attach the platform packages to a published GitHub Release. Perkins offers an update only when that release has a compatible asset with a SHA-256 digest. Release notes should describe user-visible changes.
 
 This repository is public so installed copies of Perkins can check for updates without access to the private source repository.
-The Linux `.run` installer is stored only in the private Perkins release. The Windows EXE and Mac DMG appear in both repositories because those installers are also the platform update packages.
+All installable `.run`, `.exe`, and `.dmg` files are stored only in the private Perkins release.
